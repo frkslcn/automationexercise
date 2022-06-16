@@ -1,3 +1,5 @@
+
+@smoketest
 Feature: US_19 - 20 - 21
 
   Scenario: US07_Verify Test Cases Page
