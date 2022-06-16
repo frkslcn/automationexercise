@@ -23,6 +23,9 @@ public class US_MesutPage {
     @FindBy(xpath = "//div[@class='brands-name']//ul//li[2]")
     public WebElement hmBrandName;
 
+    @FindBy (xpath = "//*[@class='productinfo text-center']")
+    public WebElement brandProducts;
+
 
 
 
