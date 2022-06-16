@@ -26,6 +26,6 @@ Feature: US_07 US_08 US_09 US_25
     And Verify that home page is visible successfully
     And Click on 'Products' button
     Then Verify user is navigated to ALL PRODUCTS page successfully
-    #And Enter product name "Blue" in search input and click search button
+    And Enter product name "Blue" in search input and click search button
     Then Verify 'SEARCHED PRODUCTS' is visible
     Then Verify all the products related to search are visible

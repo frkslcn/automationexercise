@@ -62,16 +62,16 @@ public class US_BunyaminStepDefs {
         Assert.assertTrue(page.name.isDisplayed());
 
     }
-//    @And("Enter product name {string} in search input and click search button")
-//    public void enterProductNameInSearchInputAndClickSearchButton(String arg0) {
-//       Driver.waitAndSendText(page.searchButton);
-//    }
+    @And("Enter product name {string} in search input and click search button")
+    public void enterProductNameInSearchInputAndClickSearchButton(String arg0) {
+
+    }
 
 
     @Then("Verify {string} is visible")
     public void verifySEARCHEDPRODUCTSIsVisible() {
-        Assert.assertTrue(page.displayedProduct01.isDisplayed());
-        
+
+
     }
 
     @Then("Verify all the products related to search are visible")
