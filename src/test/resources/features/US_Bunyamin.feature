@@ -2,6 +2,7 @@
 @smoketest
 Feature: US_07 US_08 US_09 US_25
 
+  @End2End
   Scenario: US07_Verify Test Cases Page
 
   Given Navigate to url 'http://automationexercise.com'
@@ -9,6 +10,7 @@ Feature: US_07 US_08 US_09 US_25
   And Click on 'Test Cases' button
   Then Verify user is navigated to test cases page successfully
 
+  @End2End
     Scenario: US_08_Verify_All_Products
 
    Given Navigate to url 'http://automationexercise.com'
@@ -30,6 +32,7 @@ Feature: US_07 US_08 US_09 US_25
     #Then Verify SEARCHED PRODUCTS is visible
    # Then Verify all the products related to search are visible
 
+  @End2End
       Scenario:TC_25_subscription
 
    Given Navigate to url 'http://automationexercise.com'

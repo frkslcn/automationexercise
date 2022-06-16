@@ -1,7 +1,7 @@
 
 @smoketest
 Feature: US_19 - 20 - 21
-
+  @End2End
   Scenario: US07_Verify Test Cases Page
 
     Given Navigate to url 'http://automationexercise.com'
