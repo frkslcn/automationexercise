@@ -7,5 +7,5 @@ Feature: US_19 - 20 - 21
     And Verify that Brands are visible on left side bar
     And Click on any brand name
     And Verify that user is navigated to brand page and brand products are displayed
-    # On left side bar, click on any other brand link
-    # Verify that user is navigated to that brand page and can see products
+    Then On left side bar, click on any other brand link
+    Then Verify that user is navigated to that brand page and can see products
