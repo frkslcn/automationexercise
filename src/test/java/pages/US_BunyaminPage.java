@@ -65,13 +65,13 @@ public class US_BunyaminPage {
     @FindBy(xpath = "//*[.='Subscription']")
     public WebElement Subscriptionbutton;
 
-    @FindBy(xpath = "//*[@href='#top']")
+    @FindBy(xpath = "//*[@id='scrollUp']")
     public WebElement arrowUpButton;
 
-    @FindBy(xpath = "(//*[.='Full-Fledged practice website for Automation Engineers'])[3]")
+    @FindBy(xpath = "((//h2)[1]")
     public WebElement automationengineerTex;
 
 
-
+//*[@alt='ecommerce website products']
 
 }
