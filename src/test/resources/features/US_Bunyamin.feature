@@ -29,3 +29,12 @@ Feature: US_07 US_08 US_09 US_25
     And Enter product name "Blue" in search input and click search button
     Then Verify 'SEARCHED PRODUCTS' is visible
     Then Verify all the products related to search are visible
+
+      Scenario:TC_25_subscription
+
+   Given Navigate to url 'http://automationexercise.com'
+     Then Verify that home page is visible successfully
+     And Scroll down page to bottom
+      Then Verify SUBSCRIPTION is visible
+      And Click on arrow at bottom right side to move upward
+    Then Verify that page is scrolled up and 'Full-Fledged practice website for Automation Engineers' text is visible on screen

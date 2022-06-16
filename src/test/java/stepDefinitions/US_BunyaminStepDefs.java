@@ -1,17 +1,21 @@
 package stepDefinitions;
 
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import org.junit.Test;
+import pages.US_AyselPage;
 import pages.US_BunyaminPage;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import pages.US_GurhanPage;
 import utilities.Driver;
 
 public class US_BunyaminStepDefs {
 
     US_BunyaminPage page =new US_BunyaminPage();
-
+    US_GurhanPage hmpage = new US_GurhanPage();
+    Faker faker=new Faker();
 
     @Then("Click on {string} button")
     public void click_on_button(String string) {
@@ -67,20 +71,47 @@ public class US_BunyaminStepDefs {
 //       Driver.waitAndSendText(page.searchButton);
 //    }
 
+        //************************************************  us25
+    @And("Scroll down page to bottom")
+    public void scrollDownPageToBottom() {
+
+        Assert.assertTrue(hmpage.SubscriptionText.isDisplayed());
+        Driver.scrollIntoViewJS(page.Subscriptionbutton);
+
+
+
+    @Then("Verify that page is scrolled up and {string} text is visible on screen")
+    public void verifyThatPageIsScrolledUpAndFullFledgedPracticeWebsiteForAutomationEngineersTextIsVisibleOnScreen() {
+        Driver.wait(5);
+
+       Driver.clickWithJS(page.arrowUpButton);
+    }
+
+    @And("Click on arrow at bottom right side to move upward")
+    public void clickOnArrowAtBottomRightSideToMoveUpward() {
+        Assert.assertTrue(page.automationengineerTex.isDisplayed());
+    }
+
+    @Then("Verify SUBSCRIPTION is visible")
+    public void verifySUBSCRIPTIONIsVisible() {
+        Assert.assertTrue(hmpage.SubscriptionText.isDisplayed());
+    }
+
+    @And("Enter product name {string} in search input and click search button")
+    public void enterProductNameInSearchInputAndClickSearchButton(String arg0) {
+
+    }
 
     @Then("Verify {string} is visible")
     public void verifySEARCHEDPRODUCTSIsVisible() {
-
 
     }
 
     @Then("Verify all the products related to search are visible")
     public void verifyAllTheProductsRelatedToSearchAreVisible() {
+
         Assert.assertTrue(page.displayedProduct01.isDisplayed());
         Assert.assertTrue(page.displayedProduct02.isDisplayed());
         Assert.assertTrue(page.displayedProduct03.isDisplayed());
     }
-
-
-
 }
