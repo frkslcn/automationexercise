@@ -69,8 +69,7 @@ public class US_BunyaminStepDefs {
 
 
     @Then("Verify {string} is visible")
-    public void verifySEARCHEDPRODUCTSIsVisible() {
-
+    public void verifySEARCHEDPRODUCTSIsVisible(String str) {
 
     }
 
