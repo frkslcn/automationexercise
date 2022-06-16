@@ -2,7 +2,7 @@ Feature: Logout
 
   Scenario Outline:
 
-
+    Given Navigate to url
     And Verify that home page is visible successfully
     And Click on 'Signup / Login' button
     Then Verify 'Login to your account' is visible
