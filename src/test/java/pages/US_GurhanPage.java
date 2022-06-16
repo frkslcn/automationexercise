@@ -4,7 +4,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class US_GurhanPage {
+public class US_GurhanPage  {
 
     public US_GurhanPage(){
         PageFactory.initElements(Driver.getDriver(), this);
