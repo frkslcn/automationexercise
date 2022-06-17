@@ -1,9 +1,11 @@
 package stepDefinitions;
 
 import com.github.javafaker.Faker;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.Alert;
 import pages.US_SinemPage;
 import utilities.Driver;
 
@@ -13,37 +15,58 @@ public class US_SinemStepDefs {
     Faker faker=new Faker();
 
     //04
-    @Given("Click on {string} button")
-    public void click_on_button(String string) {
+    @And("Click on SignupLogin button")
+    public void clickOnSignupLoginButton() {
         us_sinemPage.signUpLogIn.click();
     }
-
-    @Then("Verify {string} is visible")
-    public void verify_is_visible(String string) {
+   //
+    @Then("Verify login to account is visible")
+    public void verify_login_to_account_is_visible() {
         Assert.assertTrue(us_sinemPage.loginToYourAccountText.isDisplayed());
         Driver.wait(2);
     }
+    @Then("click login")
+    public void click_login() {
+        us_sinemPage.loginButton.click();
+        Driver.wait(2);
+    }
+    @Then("verify logged in as username is visible")
+    public void verify_logged_in_as_username_is_visible() {
+        Assert.assertTrue(us_sinemPage.loggedInAs.isDisplayed());
+        Driver.wait(2);
+    }
+    @Then("click logout")
+    public void click_logout() {
+        us_sinemPage.logout.click();
+        Driver.wait(2);
+    }
+
+//    @Then("Verify {string} is visible")
+//    public void verify_is_visible(String string) {
+//        Assert.assertTrue(us_sinemPage.loginToYourAccountText.isDisplayed());
+//        Driver.wait(2);
+//    }
     @Then("Enter correct {string} address and {string}")
     public void enter_correct_address_and(String email, String password) {
         us_sinemPage.emailLoginTextBox.sendKeys(email);
         us_sinemPage.passwordTextBox.sendKeys(password);
         Driver.wait(2);
     }
-    @Then("Click {string} button")
-    public void click_button(String string) {
-        us_sinemPage.loginButton.click();
-        Driver.wait(2);
-    }
-    @Then("Verify that {string} is visible")
-    public void verify_that_is_visible(String string) {
-        Assert.assertTrue(us_sinemPage.loggedInAs.isDisplayed());
-        Driver.wait(2);
-    }
-    @Then("Click {string}")
-    public void click(String string) {
-        us_sinemPage.logout.click();
-        Driver.wait(2);
-    }
+//    @Then("Click {string} button")
+//    public void click_button(String string) {
+//        us_sinemPage.loginButton.click();
+//        Driver.wait(2);
+//    }
+//    @Then("Verify that {string} is visible")
+//    public void verify_that_is_visible(String string) {
+//        Assert.assertTrue(us_sinemPage.loggedInAs.isDisplayed());
+//        Driver.wait(2);
+//    }
+//    @Then("Click {string}")
+//    public void click(String string) {
+//        us_sinemPage.logout.click();
+//        Driver.wait(2);
+//    }
     @Then("Verify that user is navigated to login page")
     public void verify_that_user_is_navigated_to_login_page() {
         Assert.assertTrue(us_sinemPage.loginToYourAccountText.isDisplayed());
@@ -99,12 +122,22 @@ public class US_SinemStepDefs {
     public void click_submit_button() {
         us_sinemPage.submitButton.click();
     }
+
     @Given("Click OK button")
-    public void click_ok_button()  { //throws InterruptedException
+    public void click_ok_button() throws InterruptedException { //throws InterruptedException
         Driver.wait(4);
         Driver.getDriver().switchTo().alert().accept();
+        Thread.sleep(3000);
+//        Alert i = Driver.getDriver().switchTo().alert();
+//        i.accept();
+//        Thread.sleep(2000);
+//        contactUsPage.submitButton.click();
+        //Alert alert=Driver.getDriver().switchTo().alert();
+        //System.out.println("kabulden once");
+        //alert.accept();
+        //System.out.println("kabulden sonra");
     }
-    @Given("Verify success message {string} is visible")
+    @Given("Verify success message Success! Your details have been submitted successfully.. is visible")
     public void verify_success_message_is_visible(String string) {
         Assert.assertTrue(us_sinemPage.successAlert.isDisplayed());
 
@@ -115,6 +148,7 @@ public class US_SinemStepDefs {
         Assert.assertTrue(us_sinemPage.automationExerciseImage.isDisplayed());
 
     }
+
 
 
 }

@@ -4,12 +4,12 @@ Feature: US04 US05 US06
 
     Given Navigate to url 'http://automationexercise.com'
     And Verify that home page is visible successfully
-    And Click on 'Signup / Login' button
-    Then Verify 'Login to your account' is visible
+    And Click on SignupLogin button
+    Then Verify login to account is visible
     Then Enter correct "<email>" address and "<password>"
-    And Click 'login' button
-    And Verify that 'Logged in as username' is visible
-    Then Click 'Logout'
+    And click login
+    And verify logged in as username is visible
+    Then click logout
     Then Verify that user is navigated to login page
 
     Examples:
@@ -21,7 +21,7 @@ Feature: US04 US05 US06
 
     Given Navigate to url 'http://automationexercise.com'
     Then Verify that home page is visible successfully
-    And Click on 'Signup / Login' button
+    And Click on SignupLogin button
     And Verify New User Signup! is visible
     Then Enter name and already registered email address
     And Click on Signup button
@@ -38,5 +38,5 @@ Feature: US04 US05 US06
     *  Upload file
     *  Click Submit button
     *  Click OK button
-    *  Verify success message 'Success! Your details have been submitted successfully.' is visible
+    *  Verify success message Success! Your details have been submitted successfully.. is visible
     *  Click 'Home' button and verify that landed to home page successfully
