@@ -1,6 +1,6 @@
 @smoketest
 Feature: US_10 Verify Subscription in Home Page
-
+  @End2End
   Scenario:TC_1001 Verify Subscription in Home Page
 
 

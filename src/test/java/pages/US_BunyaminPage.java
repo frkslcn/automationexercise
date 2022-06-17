@@ -54,14 +54,24 @@ public class US_BunyaminPage {
     @FindBy(xpath = "//*[@alt='ecommerce website products']")
     public WebElement displayedProduct01;
 
-    @FindBy(xpath = "(//*[@alt='ecommerce website products'])[7]")
+    @FindBy(xpath = "(//*[@alt='ecommerce website products'])[5]")
     public WebElement displayedProduct02;
 
     @FindBy(xpath = "(//*[@alt='ecommerce website products'])[3]")
     public WebElement displayedProduct03;
 
+    //********************
+
+    @FindBy(xpath = "//*[.='Subscription']")
+    public WebElement Subscriptionbutton;
+
+    @FindBy(xpath = "//*[@id='scrollUp']")
+    public WebElement arrowUpButton;
+
+    @FindBy(xpath = "((//h2)[1]")
+    public WebElement automationengineerTex;
 
 
-
+//*[@alt='ecommerce website products']
 
 }
