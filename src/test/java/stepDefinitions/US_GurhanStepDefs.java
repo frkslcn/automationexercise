@@ -1,5 +1,9 @@
 package stepDefinitions;
 
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import pages.US_GurhanPage;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
@@ -12,9 +16,10 @@ import utilities.ConfigurationReader;
 import utilities.Driver;
 
 public class US_GurhanStepDefs {
+
     US_GurhanPage hmpage = new US_GurhanPage();
     Faker faker=new Faker();
-
+Actions action= new Actions(Driver.getDriver());
 
     @Test
 
@@ -56,7 +61,23 @@ public class US_GurhanStepDefs {
         Driver.waitAndClick(hmpage.cartButton);
     }
 
+    //---------------US_12--------------------------
+    @Then("Verify both products are added to Cart")
+    public void verifyBothProductsAreAddedToCart() {
+        Assert.assertTrue(hmpage.firstProductCheck.isDisplayed());
+        Assert.assertTrue(hmpage.secondProductCheck.isDisplayed());
+    }
 
 
+    @Then("Verify their prices, quantity and total price")
+    public void verifyTheirPricesQuantityAndTotalPrice() {
+
+        Assert.assertTrue(hmpage.firstProductPrice.isDisplayed());
+        Assert.assertTrue(hmpage.secondProductPrice.isDisplayed());
+        Assert.assertTrue(hmpage.firstProductQuantity.isDisplayed());
+        Assert.assertTrue(hmpage.secondProductQuantity.isDisplayed());
+        Assert.assertTrue(hmpage.firstProductTotal.isDisplayed());
+        Assert.assertTrue(hmpage.secondProductTotal.isDisplayed());
+
+    }
 }
-
