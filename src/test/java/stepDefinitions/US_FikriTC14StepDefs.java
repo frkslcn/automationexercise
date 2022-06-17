@@ -8,12 +8,14 @@ import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import pages.US_AyselPage;
 import pages.US_FikriTC14Page;
 import utilities.ConfigurationReader;
 import utilities.Driver;
 
 public class US_FikriTC14StepDefs {
     US_FikriTC14Page placeOrderCheckoutPage= new US_FikriTC14Page();
+    US_AyselPage signUp= new US_AyselPage();
 
     Faker faker=new Faker();
 
@@ -93,7 +95,62 @@ public class US_FikriTC14StepDefs {
         placeOrderCheckoutPage.registerLoginButton.click();
     }
 
+    @When("user enters name and email")
+    public void user_enters_name_and_email() {
+       Driver.waitAndSendText(signUp.newUsersignUpname,"Fikri");
+       Driver.waitAndSendText(signUp.newUsersignUpemail,"fikri@gmail.com");
 
+    }
+    @When("user clicks signup_button")
+    public void user_clicks_signup_button() {
+        Driver.waitAndClick(signUp.newUserSignupButton);
+    }
+    @When("user verifies that enter account information is visible")
+    public void user_verifies_that_enter_account_information_is_visible() {
+
+    Assert.assertTrue(placeOrderCheckoutPage.enterAccInfText.isDisplayed());
+
+    }
+    @When("user fills details")
+    public void user_fills_details() {
+
+
+    }
+    @When("user selects checkbox signup for our newslater")
+    public void user_selects_checkbox_signup_for_our_newslater() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+    @When("user selects checkbox receive special offers")
+    public void user_selects_checkbox_receive_special_offers() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+    @When("user fills details2")
+    public void user_fills_details2() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+    @When("user clicks create account button")
+    public void user_clicks_create_account_button() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+    @Then("user verifies that acount is created")
+    public void user_verifies_that_acount_is_created() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+    @When("user clicks continue button")
+    public void user_clicks_continue_button() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+    @When("user verifies that logged in")
+    public void user_verifies_that_logged_in() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
 
 
 

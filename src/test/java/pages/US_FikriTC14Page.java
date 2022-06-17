@@ -85,6 +85,11 @@ public class US_FikriTC14Page {
     @FindBy(xpath = "(//a[@data-product-id='2'])[2]")
     public WebElement secondProductAfterHovOv;
 
+    @FindBy(xpath = "(//h2)[1]")
+    public WebElement enterAccInfText;
+
+
+
 
 
 
