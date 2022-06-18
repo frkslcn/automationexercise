@@ -1,7 +1,8 @@
-@hbk
+
+@smoketest
 Feature:Add to cart from Recommended Items
 
-    @recommendedItems
+
   Scenario: TC-22-Add to cart from Recommended Items
 
    When Navigate to url 'http://automationexercise.com'

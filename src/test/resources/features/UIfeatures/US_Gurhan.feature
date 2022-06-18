@@ -1,6 +1,6 @@
 @smoketest
 Feature: US_10, US_11, US_12
-  @End2End
+
   Scenario:US_10 Verify Subscription in Home Page
 
     Given Navigate to url 'http://automationexercise.com'
@@ -22,7 +22,7 @@ Feature: US_10, US_11, US_12
     And Enter email address in input and click arrow button
     Then Verify success message 'You have been successfully subscribed!' is visible
 
-@US_12
+
   Scenario:US_12 Add Products in Cart
 
   Given Navigate to url 'http://automationexercise.com'

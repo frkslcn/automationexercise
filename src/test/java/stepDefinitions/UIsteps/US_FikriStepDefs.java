@@ -1,4 +1,4 @@
-package stepDefinitions;
+package stepDefinitions.UIsteps;
 
 public class US_FikriStepDefs {
 }
