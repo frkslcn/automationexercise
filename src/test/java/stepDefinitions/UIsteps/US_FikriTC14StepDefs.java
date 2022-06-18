@@ -1,4 +1,4 @@
-package stepDefinitions;
+package stepDefinitions.UIsteps;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -110,17 +110,17 @@ public class US_FikriTC14StepDefs {
 
     Assert.assertTrue(placeOrderCheckoutPage.enterAccInfText.isDisplayed());
 
-    }
+   }
     @When("user fills details")
     public void user_fills_details() {
 
 
     }
-    @When("user selects checkbox signup for our newslater")
-    public void user_selects_checkbox_signup_for_our_newslater() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
+//    @When("user selects checkbox signup for our newslater")
+//    public void user_selects_checkbox_signup_for_our_newslater() {
+//        // Write code here that turns the phrase above into concrete actions
+//        throw new io.cucumber.java.PendingException();
+//    }
     @When("user selects checkbox receive special offers")
     public void user_selects_checkbox_receive_special_offers() {
         // Write code here that turns the phrase above into concrete actions

@@ -1,4 +1,4 @@
-package stepDefinitions;
+package stepDefinitions.UIsteps;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;

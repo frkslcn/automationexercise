@@ -1,8 +1,8 @@
 
 @smoketest
 Feature: US_19 - 20 - 21
-  @End2End
-  Scenario: US07_Verify Test Cases Page
+
+  Scenario: US19_View_&_Cart_Brand_Products
 
     Given Navigate to url 'http://automationexercise.com'
     Then Click on Products button

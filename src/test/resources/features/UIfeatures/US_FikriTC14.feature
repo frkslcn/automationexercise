@@ -1,6 +1,6 @@
 
 
-@smoketest
+
 @place_order_checkout
 Feature: TC14_Place Order Register while Checkout
 
@@ -21,7 +21,7 @@ Feature: TC14_Place Order Register while Checkout
     And user clicks signup_button
     And user verifies that enter account information is visible
     And user fills details
-    And user selects checkbox signup for our newslater
+   # And user selects checkbox signup for our newslater
     And user selects checkbox receive special offers
     And user fills details2
     And user clicks create account button

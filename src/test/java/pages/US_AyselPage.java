@@ -13,6 +13,8 @@ public class US_AyselPage {
     }
 
 
+    @FindBy(xpath = "//*[@href='/login']")
+    public WebElement signUpButnhomepage;
     @FindBy(name = "name")
     public WebElement newUsersignUpname;
 
@@ -21,6 +23,9 @@ public class US_AyselPage {
 
     @FindBy(xpath = "(//*[@type='submit'])[2]")
     public WebElement newUserSignupButton;
+
+    @FindBy(xpath = "(//*[.='Enter Account Information'])[2]")
+    public WebElement ENTERACCOUNT_INFORMATIONivisible;
 
     @FindBy(xpath = "//a[normalize-space()='Signup / Login']")
     public WebElement SigninLoginButton;
@@ -77,10 +82,12 @@ public class US_AyselPage {
     @FindBy(xpath = "//button[text()='Create Account']")
     public WebElement createAccountButton;
 
-    @FindBy(tagName = "//b")
+    @FindBy(tagName = "(//*[@class='title text-center']")
     public WebElement accountCreatedText;
 
-    @FindBy(xpath = "//*[@data-qa='continue-button']")
+    @FindBy(xpath = "(//*[.='Continue'])[1]")
+
+    ////*[@data-qa='continue-button']
     public WebElement continueButton;
 
     @FindBy(xpath = "//i[@class='fa fa-user']")
