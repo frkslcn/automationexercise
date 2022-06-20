@@ -11,15 +11,17 @@ public class APIDeneme {
 
     @Test
     public void get() {
-        String endpoint = "https://automationexercise.com/api/productsList";
-        //This is primitive way that we do not prefer!
+        //String endpoint = "https://automationexercise.com/api/productsList";
+        //String endpoint = "https://automationexercise.com/api/brandsList";
+        String endpoint = "https://automationexercise.com/api/getUserDetailByEmail";
+
         //Set the expected data
         //3. send the request and Get the response
         Response response = given().when().get(endpoint);
         response.prettyPrint();
         //4. do the validation and assertion
 
-        System.out.println("response.then().statusCode(200) = " + response.then().statusCode(200));
+        response.then().statusCode(200);
 
 
 
