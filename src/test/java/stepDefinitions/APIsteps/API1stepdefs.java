@@ -37,16 +37,14 @@ public class API1stepdefs {
             Assert.assertEquals("Status code",200, response.getStatusCode());
         }
 
-
+//
 //        response2.then().assertThat().statusCode(200).contentType(ContentType.JSON).
-//        body("products.id",hasSize(43));
-
-
-
-
+//                body("products.id", hasSize(43));
 
 
     }
+
+
 
 
 
